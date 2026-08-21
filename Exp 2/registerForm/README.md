@@ -1,97 +1,212 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# React Native – Experiment 2
 
-# Getting Started
+## 1. Welcome to react native with your name. 
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+<p align="center">
+  <img src="Images/change-text-color.png" height="400" width="300">
+</p>
 
-## Step 1: Start Metro
+---
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+## 2. Login form using React Native.
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+<p align="center">
+<img src="Images/login-1.png" height="400" width="300">
+</p>
 
-```sh
-# Using npm
-npm start
+---
 
-# OR using Yarn
-yarn start
+<p align="center">
+<img src="Images/login-2.png" height="400" width="300">
+</p>
+
+---
+
+<p align="center">
+<img src="Images/login-3.png" height="400" width="300">
+</p>
+
+---
+
+## 3. Command to Create a React Native Project
+
+Use the following command to initialize a new React Native application.
+
+```bash
+npx @react-native-community/cli init MyApp
 ```
 
-## Step 2: Build and run your app
+The command automatically creates the project directory, installs the necessary dependencies, and prepares the default project structure.
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+### Default Files Generated
 
-### Android
+- android
+- ios
+- node_modules
+- package.json
+- package-lock.json
+- App.tsx
+- index.js
 
-```sh
-# Using npm
-npm run android
+---
 
-# OR using Yarn
-yarn android
+## 4. Purpose of the `android` Folder
+
+The **android** directory stores all Android-specific project files required for compiling and running the application on Android devices.
+
+### Contents
+
+- Gradle configuration
+- AndroidManifest.xml
+- Java/Kotlin source code
+- Drawable and resource files
+
+Whenever an APK is generated or the application is installed on an Android phone, these files are used during the build process.
+
+---
+
+## 5. Why is the `ios` Folder Included?
+
+The **ios** directory contains the native iOS project created for Xcode. It allows the same React Native project to be compiled and executed on Apple devices.
+
+### Folder Includes
+
+- Xcode project
+- Swift/Objective-C files
+- Assets
+- Configuration files
+
+> This folder is mainly required while developing on macOS.
+
+---
+
+## 6. Which File Acts as the Main Screen?
+
+The **App.tsx** file serves as the primary screen of a React Native application. All major UI components are generally designed inside this file.
+
+### Responsibilities
+
+- Display application UI.
+- Organize layouts.
+- Handle user interaction.
+- Render child components.
+
+---
+
+## 7. Difference Between `package.json` and `package-lock.json`
+
+| package.json | package-lock.json |
+| :----------- | :---------------- |
+| Defines project information and dependencies. | Stores the exact installed versions of dependencies. |
+| Modified manually when required. | Automatically maintained by npm. |
+| Used for dependency management. | Ensures consistent installations across systems. |
+
+---
+
+## 8. Purpose of the `node_modules` Folder
+
+The **node_modules** folder stores every package installed through npm. These dependencies are necessary for building and executing the application.
+
+### Why It used -
+
+- Contains third-party libraries.
+- Required during project execution.
+- Automatically recreated using `npm install`.
+
+---
+
+## 9. Entry File of the Application
+
+The application starts execution from **index.js**. It registers the root component and launches the React Native application.
+
+### Functions
+
+- Registers `App`.
+- Starts the application.
+- Connects JavaScript to the native environment.
+
+---
+
+## 10. Metro Bundler
+
+**Metro Bundler** is the default bundling tool for React Native projects. It converts JavaScript source code into a bundle and updates the application whenever code changes are saved.
+
+### Features
+
+- Fast Refresh
+- JavaScript bundling
+- Asset management
+- Automatic rebuilding
+
+---
+
+## 11. Command to Run the Android Application
+
+```bash
+npx react-native run-android
 ```
 
-### iOS
+This command compiles the Android project, installs it on a connected device or emulator, and launches the application.
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+---
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+## 12. Checking Whether an Android Device is Connected
 
-```sh
-bundle install
+Execute the following command:
+
+```bash
+adb devices
 ```
 
-Then, and every time you update your native dependencies, run:
+### Sample Output
 
-```sh
-bundle exec pod install
+```bash
+List of devices attached
+NN9LQOBY8L8DKNDE  device
 ```
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+If the status shows **device**, the Android phone is properly connected and ready for debugging.
 
-```sh
-# Using npm
-npm run ios
+---
 
-# OR using Yarn
-yarn ios
-```
+# Program Outputs
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+## Program 15 – Change Text Color.
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+<p align="center">
+<img src="Images/change-text-color.png" height="400" width="300">
+</p>
 
-## Step 3: Modify your app
+---
 
-Now that you have successfully run the app, let's make changes!
+## Program 16 – Change Text Style.
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+<p align="center">
+<img src="Images/change-text-style.png" height="400" width="300">
+</p>
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+---
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+## Program 17 – Change Background Color.
 
-## Congratulations! :tada:
+<p align="center">
+<img src="Images/change-background-color.png" height="400" width="300">
+</p>
 
-You've successfully run and modified your React Native App. :partying_face:
+---
 
-### Now what?
+## Program 18 – Student Information Card.
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+<p align="center">
+<img src="Images/student-id.png" height="600" width="400">
+</p>
 
-# Troubleshooting
+---
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+## Program 19 – Counter Application.
 
-# Learn More
+<p align="center">
+<img src="Images/counter.png" height="400" width="300">
+</p>
 
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+---
