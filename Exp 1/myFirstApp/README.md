@@ -1,97 +1,72 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# React Native – Experiment 1
 
-# Getting Started
+## 1. What is Chocolatey?
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+**Chocolatey** is a Windows package manager that helps users install, update, and remove software using command-line instructions. It simplifies software management by automatically downloading and configuring applications.
 
-## Step 1: Start Metro
+### Installation Command
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+Run the following command in **PowerShell (Run as Administrator)**:
 
-To start the Metro dev server, run the following command from the root of your React Native project:
-
-```sh
-# Using npm
-npm start
-
-# OR using Yarn
-yarn start
+```powershell
+Set-ExecutionPolicy Bypass -Scope Process -Force;
+[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072;
+iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 ```
 
-## Step 2: Build and run your app
+### Benefits
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+- Installs software quickly.
+- Updates applications using commands.
+- Reduces manual installation steps.
+- Easy to manage multiple packages.
 
-### Android
+---
 
-```sh
-# Using npm
-npm run android
+## 2. What is React Native? Difference Between React and React Native
 
-# OR using Yarn
-yarn android
-```
+### React Native
 
-### iOS
+**React Native** is an open-source framework developed by **Meta** for creating Android and iOS mobile applications using JavaScript and React. It allows developers to build native mobile apps from a single codebase, reducing development effort while maintaining good performance.
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+### Comparison of React and React Native
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+| React | React Native |
+| :----- | :----------- |
+| Used for developing web applications. | Used for developing Android and iOS applications. |
+| Uses HTML elements like `<div>` and `<button>`. | Uses native components such as `<View>`, `<Text>`, and `<Button>`. |
+| Runs inside a web browser. | Runs directly on mobile devices. |
+| Uses CSS for styling. | Uses `StyleSheet` objects for styling. |
 
-```sh
-bundle install
-```
+### Applications
 
-Then, and every time you update your native dependencies, run:
+- **React:** Creates responsive websites.
+- **React Native:** Creates native mobile applications.
 
-```sh
-bundle exec pod install
-```
+---
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+## 3. Where is React Native Used at Company Level?
 
-```sh
-# Using npm
-npm run ios
+Many software companies use **React Native** to develop applications for both Android and iOS using one shared codebase. This approach reduces development cost, improves productivity, and makes maintenance easier.
 
-# OR using Yarn
-yarn ios
-```
+### Advantages for Companies
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+- One codebase for multiple platforms.
+- Faster application development.
+- Easier maintenance and updates.
+- Lower development expenses.
+- Better code reusability.
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+### Popular Companies Using React Native
 
-## Step 3: Modify your app
+- Meta (Facebook & Instagram)
+- Microsoft (Microsoft Teams)
+- Shopify
+- Discord
+- Walmart
 
-Now that you have successfully run the app, let's make changes!
+### Practical Example
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+Suppose a company is creating a **shopping application**. Instead of maintaining separate Android and iOS projects, the developers build a single React Native application. The same source code is then used to generate applications for both platforms, saving both time and resources.
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+---
